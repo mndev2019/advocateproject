@@ -58,7 +58,7 @@ export default function Footer() {
         hide && (
           <>
             <button onClick={movetoTop} className='fixed right-7 bottom-7 bg-blue-gray-700 hover:bg-blue-gray-200 animation animate-pulse text-white w-[50px] h-[50px] leading-8 rounded-full  z-40'>
-            <FontAwesomeIcon icon={faArrowRight} />
+            <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
             </button>
           </>
         )
