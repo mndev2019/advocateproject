@@ -83,7 +83,7 @@ const HomeBlog = () => {
                     </div>
                     <div className="w-full">
                             <div className="text-center">
-                                <Link to={'/services'} className="bg-gray-800 mt-5   text-white transition-all duration-100 hover:bg-gray-300 hover:text-black shadow-sm shadow-blue-gray-900 inline-flex items-center gap-3 t-12 uppercase tracking-wide px-10 py-5 rounded-full">
+                                <Link to={'/knowledge-corner'} className="bg-gray-800 mt-5   text-white transition-all duration-100 hover:bg-gray-300 hover:text-black shadow-sm shadow-blue-gray-900 inline-flex items-center gap-3 t-12 uppercase tracking-wide px-10 py-5 rounded-full">
                                     View All  <span className='rotate-[-45deg]'><FontAwesomeIcon icon={faArrowRight} /></span>
                                 </Link>
                             </div>
