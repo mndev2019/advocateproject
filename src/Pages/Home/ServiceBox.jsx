@@ -2,7 +2,9 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { url } from '../../utils';
-import { RightOutlined } from '@ant-design/icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const ServiceBox = ({service}) => {
     function cleanString(input) {
         const string = input.substr(0, 150);
@@ -13,7 +15,7 @@ const ServiceBox = ({service}) => {
     }
     return (
         <>
-            <div className="w-full service-block-one">
+            <div className="w-full service-block-one ">
                 <Link to={'/services/' + service?.url} className="block w-full inner-box">
                     <div className="icon-box te-icon-box">
                         <div className="imagebox rounded-ss-xl rounded-se-xl overflow-hidden">
@@ -33,7 +35,7 @@ const ServiceBox = ({service}) => {
                         <div className="link te-btn w-full absolute bottom-3 start-0 px-4">
                             <button className="transition-all duration-100 bg-gray-300 text-black shadow-sm shadow-blue-gray-900 inline-flex items-center justify-center gap-3 t-12 uppercase tracking-wide px-10 py-3 w-full  rounded-full">
                                 Explore  <span className='rotate-[-45deg]'>
-                                    <RightOutlined/>
+                                <FontAwesomeIcon icon={faArrowRight} />
                                 </span>
                             </button>
                         </div>

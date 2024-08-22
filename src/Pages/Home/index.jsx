@@ -16,7 +16,7 @@ import Services from './Services';
 import Banner from './Banner';
 import { Contact } from './Contact';
 import Teams from '../AboutUs/Teams';
-import Blogs from '../Blogs';
+import HomeBlog from '../Blogs/HomeBlog';
 
 const Home = () => {
     const aparts = [
@@ -74,7 +74,7 @@ const Home = () => {
           
                 <Banner/>
             
-            <section className='space aboutSection bg-blue-gray-50 lg:p-20 p-10'>
+            <section className='space aboutSection bg-blue-gray-50 lg:p-20  md:p-10 p-5'>
                 <div className="container mx-auto">
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                         <div className="col-span-1">
@@ -107,7 +107,7 @@ const Home = () => {
                 </div>
             </section>
             <Services />
-            <section className="py-[4rem] bg-footer relative  text-white lg:p-20 p-10">
+            <section className="py-[4rem] bg-footer relative  text-white lg:p-20 md:p-10 p-5">
                 <div className="container mx-auto">
                     {/* <div className="absolute top-0 end-0 w-[10rem] opacity-15 rotate-[45deg]"><Plane /></div> */}
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
@@ -127,7 +127,7 @@ const Home = () => {
                             {
                                 aparts.map((arr, i) => (
                                     <>
-                                        <div className="w-full border-b border-gray-100 pb-40 mb-9">
+                                        <div className="w-full border-b border-gray-100 lg:pb-40 pb-10 mb-9">
                                             <h5 className='strokeword hidden'>0{i + 1}</h5>
                                             <h4 className='lg:text-[2rem] text-[1.2rem] font-bold'>
                                                 {arr.title}
@@ -144,7 +144,7 @@ const Home = () => {
                 </div>
             </section>
             <Teams/>
-            <Blogs/>
+            <HomeBlog/>
             <Contact/>
 
         </>

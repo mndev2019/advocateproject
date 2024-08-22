@@ -9,6 +9,8 @@ import BlogBox from './BlogBox';
 import PageBanner from '../../Layout/PageBanner';
 import { get_blogs } from '../../utils';
 import { useEffect, useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const Blogs = () => {
@@ -20,17 +22,18 @@ const Blogs = () => {
     useEffect(() => {
         get_all_blogs();
     }, []);
+
     return (
         <>
             <PageBanner title="Knowledge Corner" links="Knowledge Corner" banner={contactimg} />
-            <section className="lg:py-9 py-2">
+            <section className="lg:p-20 md:p-10 p-5">
                 <div className="container mx-auto">
-                    <div className="grid lg:grid-cols-3 grid-cols-1 gap-3">
+                    <div className="grid lg:grid-cols-4 grid-cols-1 gap-4">
                         {
                             data?.data && data?.data.map((blg) => (
                                 <>
-                                    <div className=" w-full ">
-                                        <Link className='block w-full h-full' to={'/blogs/' + blg.url}>
+                                    <div className=" w-full h-full">
+                                        <Link className=' w-full h-full' to={'/blogs/' + blg.url}>
                                             <BlogBox blog={blg} />
                                         </Link>
                                     </div>

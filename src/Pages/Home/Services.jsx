@@ -1,5 +1,5 @@
 //import React from 'react'
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 //import { ArrowRightOutlined } from '@ant-design/icons';
 import ServiceBox from './ServiceBox';
 import { get_services } from '../../utils';
-import { RightOutlined } from '@ant-design/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Services = () => {
     const [data, setData] = useState([]);
     const getdata = async () => {
@@ -24,7 +25,7 @@ const Services = () => {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-       
+
         cssEase: "linear",
         responsive: [
             {
@@ -58,9 +59,9 @@ const Services = () => {
             }
         ]
     };
-  return (
-    <>
-        <section className="space bg-blue-gray-50">
+    return (
+        <>
+            <section className="space bg-blue-gray-50 lg:p-20 md:p-10 p-5">
                 <div className="container mx-auto">
                     <div className="">
                         <div className="w-full mb-9">
@@ -73,7 +74,11 @@ const Services = () => {
                                 {
                                     [...data].toReversed().map((serv) => (
                                         <>
-                                            <ServiceBox service={serv} />
+                                            
+                                           <div className="m-2">
+                                           <ServiceBox service={serv} />
+                                           </div>
+                                           
                                         </>
                                     ))
                                 }
@@ -82,15 +87,15 @@ const Services = () => {
                         <div className="w-full mt-9">
                             <div className="text-center">
                                 <Link to={'/services'} className="bg-gray-800    text-white transition-all duration-100 hover:bg-gray-300 hover:text-black shadow-sm shadow-blue-gray-900 inline-flex items-center gap-3 t-12 uppercase tracking-wide px-10 py-5 rounded-full">
-                                    View All  <span className='rotate-[-45deg]'><RightOutlined/></span>
+                                    View All  <span className='rotate-[-45deg]'><FontAwesomeIcon icon={faArrowRight} /></span>
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-    </>
-  )
+        </>
+    )
 }
 
 export default Services

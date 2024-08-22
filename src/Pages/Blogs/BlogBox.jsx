@@ -8,7 +8,7 @@ const BlogBox = (props) => {
 
     return (
         <>
-            <div className="p-5 relative rounded-ss-2xl rounded-se-2xl rounded-es-2xl overflow-hidden border border-blue-gray-100">
+            <div className="p-5 w-full h-full relative rounded-ss-2xl rounded-se-2xl rounded-es-2xl overflow-hidden border border-blue-gray-100">
                 <ul className="flex list-disc gap-6 ps-5 text-sm mb-4 text-blue-gray-500">
                     <li>
                         {moment(props?.blog?.created_at).format('MMM DD, YYYY')}

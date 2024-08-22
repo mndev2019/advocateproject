@@ -32,29 +32,38 @@ export const Contact = () => {
     }
     return (
         <>
-            <section className="py-[4rem]">
-                <div className="container">
-                    <div className="flex flex-wrap">
-                        <div className="w-full px-4">
-                            <h4 className="mb-10 lg:text-[3rem] text-[1.5rem] font-semibold">
-                                Reach us out for a legal evaluation & solution
-                            </h4>
-                        </div>
-                        <div className="md:w-1/2 w-full">
-                            <div className="w-full px-2 h-full">
-                                {
-                                    location.pathname == "/" ? (<>
-                                        <img src={advimg} alt="" className="w-full h-full object-cover" />
-                                    </>) : (<>
-                                        <Googlemap />
-                                    </>)
-                                }
-
+            <section className="lg:p-20 md:p-10 p-5">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-1">
+                        <div className="col-span-1">
+                            <div className="w-full">
+                                <div className="w-full px-4">
+                                    <h4 className="mb-10 lg:text-[3rem] text-[1.5rem] font-semibold">
+                                        Reach us out for a legal evaluation & solution
+                                    </h4>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
 
-                        <div className="lg:w-1/2 md:w-1/2 w-full">
-                            <div className="w-full px-5">
+                        <div className="col-span-1">
+                            <div className=" w-full h-full">
+                                <div className="w-full px-2 h-full">
+                                    {
+                                        location.pathname == "/" ? (<>
+                                            <img src={advimg} alt="" className="w-full h-full object-cover rounded-lg" />
+                                        </>) : (<>
+                                            <Googlemap />
+                                        </>)
+                                    }
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="col-span-1">
+                            <div className="w-full h-full px-2">
 
                                 <div className='w-full p-4 bg-blue-gray-50 rounded-lg shadow-sm shadow-blue-gray-500'>
                                     {

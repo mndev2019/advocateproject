@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <>
       <PageBanner title="Contact us" links="Contact Us" banner={contactbanner} />
-      <section className='py-[4rem] contactusdetails'>
+      <section className='py-[4rem] contactusdetails '>
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-4 grid-cols-2">
             <div className="w-full box ">

@@ -1,7 +1,7 @@
 //import React from 'react'
 //import wlogo from '../assets/img/white-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { get_contact_value, url } from '../utils';
 import { Link } from 'react-router-dom';
 import { LinkedinFilled } from '@ant-design/icons';
@@ -58,7 +58,7 @@ export default function Footer() {
         hide && (
           <>
             <button onClick={movetoTop} className='fixed right-7 bottom-7 bg-blue-gray-700 hover:bg-blue-gray-200 animation animate-pulse text-white w-[50px] h-[50px] leading-8 rounded-full  z-40'>
-            <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
+            <FontAwesomeIcon icon={faArrowUp} />
             </button>
           </>
         )
@@ -142,9 +142,9 @@ export default function Footer() {
                 </div>
               </div>
               <div className="w-full">
-                <p className="text-md tracking-widest text-white">
+                <p className="md:text-md text-xs tracking-widest text-white">
                   <span className="font-bold me-3">Disclaimer : </span>
-                  <span>
+                  <span className='font-light'>
                     Under the rules of the Bar Council of India, an advocate is prohibited from soliciting work or advertising through communication in the public domain. This website is meant solely for the purposes of providing information and not for the purpose of advertising.
 
 

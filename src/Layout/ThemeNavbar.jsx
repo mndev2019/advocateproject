@@ -1,6 +1,6 @@
 //import React from 'react'
 import React, { useEffect, useState } from 'react'
-import { BankOutlined, LinkedinOutlined, MailOutlined, RightOutlined, TabletOutlined } from '@ant-design/icons';
+import { BankOutlined, LinkedinOutlined, MailOutlined, TabletOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Button,
@@ -18,6 +18,8 @@ import {
 } from "@material-tailwind/react";
 import { get_contact_value, get_services, send_query, url } from '../utils';
 import { Alert } from "@material-tailwind/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ThemeNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
@@ -96,7 +98,7 @@ const ThemeNavbar = () => {
         <Link to={'/contact-us'} className={`t-14 nav-link uppercase font-bold ${location.pathname == '/contact-us' ? 'active' : ''}`}>Contact Us</Link>
         <Link to={'/career'} className={`t-14 nav-link uppercase font-bold ${location.pathname == '/career' ? 'active' : ''}`}>Career</Link>
         <Button onClick={handleOpen} className='bg-black lg:ms-auto text-end inline-flex gap-2 items-center text-white max-w-[190px]   t-12 uppercase tracking-wide px-6 py-3 rounded-full '>
-          Get in touch <span className='rotate-[-45deg] inline-block'><RightOutlined /></span>
+          Get in touch <span className='rotate-[-45deg] inline-block'><FontAwesomeIcon icon={faArrowRight} /></span>
         </Button>
       </div>
     </>

@@ -18,7 +18,7 @@ const Teams = () => {
     }, []);
     var settings = {
         dots: false,
-       
+    
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -56,10 +56,10 @@ const Teams = () => {
     };
     return (
         <>
-            <section className='bg-blue-gray-100/70 pt-[2rem] pb-[5rem]'>
-                <div className="container">
+            <section className='bg-blue-gray-100/70  lg:p-20 md:p-10 p-5 '>
+                <div className="container mx-auto">
                     <div className="flex">
-                        <div className="w-full">
+                        <div className="w-full ">
 
                             <h2 className='lg:text-[3rem] text-center text-[1.5rem] lg:mb-4 mb-4 font-semibold text-gray-900'>
                                 Our Valuable Team
@@ -68,7 +68,7 @@ const Teams = () => {
                                 {
                                     [...data].map(testm => (
                                         <>
-                                            <div className=''>
+                                            <div className='m-2'>
                                                 <div className="w-full profilebox border overflow-hidden">
 
                                                     <div className="block relative">

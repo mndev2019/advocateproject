@@ -1,9 +1,11 @@
 //import React from 'react'
 //import moment from 'moment'
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { get_blogs} from 'utils'
+import { get_blogs } from 'utils'
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import BlogBox from 'pages/blogs/BlogBox';
@@ -60,9 +62,9 @@ const Blogs = () => {
             }
         ]
     };
-  return (
-   <>
-     <section className='bg-blue-gray-50 pt-[2rem] pb-[5rem]'>
+    return (
+        <>
+            <section className='bg-blue-gray-50 pt-[2rem] pb-[5rem]'>
                 <div className="container" id="services">
                     <div className="flex flex-wrap">
                         <div className="w-full">
@@ -77,18 +79,18 @@ const Blogs = () => {
                                 {
                                     [...data].map(blg => (
                                         <>
-                                            
-                                                <div className="w-full h-full  overflow-hidden">
-                                                    <Link className='block w-full h-full bg-white' to={'/blogs/' + blg.url}>
 
-                                                            <BlogBox blog={blg}/>
+                                            <div className="w-full h-full  overflow-hidden">
+                                                <Link className='block w-full h-full bg-white' to={'/blogs/' + blg.url}>
 
-                                                        
-                                                    </Link>
+                                                    <BlogBox blog={blg} />
 
 
-                                                </div>
-                                            
+                                                </Link>
+
+
+                                            </div>
+
                                         </>
                                     ))
                                 }
@@ -105,8 +107,8 @@ const Blogs = () => {
                     </div>
                 </div>
             </section>
-   </>
-  )
+        </>
+    )
 }
 
 export default Blogs
