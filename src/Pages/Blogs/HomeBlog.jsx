@@ -61,6 +61,11 @@ const HomeBlog = () => {
         <>
             <section className="lg:p-20 md:p-10 p-5">
                 <div className="container mx-auto">
+                <div className="w-full mb-9">
+                            <h2 className='lg:text-[3rem] sectiontitle text-center text-[1.5rem] lg:mb-4 mb-4 font-semibold text-gray-900'>
+                                Blogs & Articles
+                            </h2>
+                        </div>
                     <div className="w-full">
                         <Slider {...settings}>
 

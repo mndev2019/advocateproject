@@ -1,6 +1,5 @@
 //import React from 'react'
 import React, { useEffect, useState } from 'react'
-import { BankOutlined, LinkedinOutlined, MailOutlined, TabletOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Button,
@@ -72,7 +71,7 @@ const ThemeNavbar = () => {
   }
   const navList = (
     <>
-      <div className='w-full flex text-black  md:flex-row flex-col  md:items-center justify-start md:gap-7 gap-4'>
+      <div className='w-full flex text-black  md:flex-row flex-col  md:items-center justify-start md:gap-7 gap-4 mt-[30px]'>
         <Link to={'/'} className={`t-14 nav-link uppercase font-bold ${location.pathname == '/' ? 'active' : ''}`}>Home</Link>
         <Link to={'/about-us'} className={`t-14 nav-link uppercase font-bold ${location.pathname == '/about-us' ? 'active' : ''}`}>About Us</Link>
 
@@ -80,7 +79,7 @@ const ThemeNavbar = () => {
           <MenuHandler>
             <button className='t-14 text-start nav-link  uppercase font-bold'>Expertise</button>
           </MenuHandler>
-          <MenuList className='dropdowncustom top-[100%] -m-1 rounded-none bg-[#001e50] text-white z-50 shadow-md shadow-[#001e50]'>
+          <MenuList className='dropdowncustom top-[100%] -m-1 rounded-none bg-white text-black z-50 shadow-md shadow-[#001e50]'>
             {
               services.map((link) => (
                 <>
@@ -159,47 +158,6 @@ const ThemeNavbar = () => {
             </div>
             <div className="lg:w-3/4 md:w-7/8 w-full">
               <div className="w-full h-full">
-                <div className="lg:flex hidden w-full py-2 items-center border-b border-slate-300 px-5">
-                  <div className="lg:w-1/4">
-                    <div className="w-full h-full px-2 text-base font-light t-14">
-                      <div className='flex gap-2'>
-                        <span className='me-1'><BankOutlined /></span>
-                        <span>
-                          D/200, L.G.F., Defence Colony, New Delhi - 110024
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:w-1/4">
-                    <div className="w-full h-full px-2 text-base font-light t-14">
-                      <p>
-                        <span className='me-1'><MailOutlined /></span>
-                        <a href='mailto:info@laccolegal.com'>
-                          info@laccolegal.com
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="lg:w-1/4">
-                    <div className="w-full h-full px-2 text-base font-light t-14">
-                      <p>
-                        <span className='me-1'><TabletOutlined /></span>
-                        <a href='tel:+91 - 11 - 4905 2705'>
-                          +91 - 11 - 4905 2705
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="lg:w-1/4">
-                    <div className="w-full h-full flex gap-2 justify-end">
-
-                      <Link to={'https://www.linkedin.com/company/lacco-legal'} className='w-6 h-6  leading-6 text-center t-20'>
-                        <LinkedinOutlined />
-                      </Link>
-
-                    </div>
-                  </div>
-                </div>
                 <div className="w-full">
                   <Navbar className="mx-auto  shadow-none max-w-screen-xl px-4 lg:px-8 py-0">
                     <div className="container mx-auto flex items-center lg:justify-start justify-between  text-blue-gray-900">

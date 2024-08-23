@@ -1,19 +1,22 @@
 //import React from 'react'
-import PageBanner from 'layouts/PageBanner'
 
-import contactbanner from 'assets/img/contactbanner.jpg'
+
+import contactbanner from '../../assets/img/contactbanner.jpg'
 import { Link, useParams } from 'react-router-dom'
-import { get_profile, url } from 'utils'
+import { get_profile, url } from '../../utils'
 import HTMLReactParser from 'html-react-parser'
-import quoteimg from 'assets/img/quote.png'
+import quoteimg from '../../assets/img/quote.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import BlogBox from 'pages/blogs/BlogBox'
+
+
+import { useEffect, useState } from 'react'
+import PageBanner from '../../Layout/PageBanner'
+import BlogBox from '../Blogs/BlogBox'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { useEffect, useState } from 'react'
+import { FaLinkedin } from 'react-icons/fa'
 
 const SingleTeam = () => {
     const parmas = useParams();
@@ -103,7 +106,7 @@ const SingleTeam = () => {
                                                             <FontAwesomeIcon icon={faPhone} />
                                                         </Link>
                                                         <Link target='_blank' to={team.linkedin}>
-                                                            <FontAwesomeIcon icon={faLinkedin} />
+                                                            <FontAwesomeIcon icon={FaLinkedin} />
                                                         </Link>
                                                     </div>
                                                 </div>

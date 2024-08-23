@@ -9,6 +9,8 @@ import Blogs from './Pages/Blogs'
 import Services from './Pages/Services'
 import SingleBlog from './Pages/Blogs/SingleBlog'
 import SingleService from './Pages/Services/SingleService'
+import SingleTeam from './Pages/AboutUs/SingleTeam'
+
 
 
 
@@ -24,6 +26,8 @@ function App() {
         <Route path='/services/' element={<Services/>}/>
         <Route path='/blogs/:url' element={<SingleBlog/>} />
         <Route path='/services/:url' element={<SingleService/>} />
+        <Route path='/teams/:url' element={<SingleTeam/>}/>
+        
       </Route>
     )
   )

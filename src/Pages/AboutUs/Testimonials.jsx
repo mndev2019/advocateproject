@@ -10,6 +10,7 @@ import { StarFilled, StarOutlined } from "@ant-design/icons";
 import HTMLReactParser from "html-react-parser/lib/index";
 const Testimonials = () => {
     const [data, setData] = useState([]);
+    const [expanded, setExpanded] = useState([]);
     const getdata = async () => {
         const res = await get_testimonilals();
         setData(res.data)
@@ -17,6 +18,15 @@ const Testimonials = () => {
     useEffect(() => {
         getdata();
     }, []);
+    const toggleExpand = (index) => {
+        const updatedExpanded = [...expanded];
+        updatedExpanded[index] = !updatedExpanded[index];
+        setExpanded(updatedExpanded);
+    };
+    const truncateText = (text, maxLength) => {
+        if (!text) return "Loading..."; // Default text if the description is not available
+        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+    };
     var settings = {
         dots: true,
         infinite: true,
@@ -61,7 +71,7 @@ const Testimonials = () => {
                             </h2>
                             <Slider {...settings}>
                                 {
-                                    [...data].map((testm) => (
+                                    [...data].map((testm,index) => (
                                         <>
                                             <div className='p-4'>
                                                 <div className="w-full p-4 rounded-xl border shadow-sm bg-white shadow-blue-gray-700">
@@ -85,8 +95,22 @@ const Testimonials = () => {
 
                                                     </div>
                                                     <div className="w-full mt-9">
-                                                        <p className='text-lg tracking-wider'>{HTMLReactParser(testm.description ?? "Loading...")}</p>
-                                                    </div>
+                                                    <p className='text-lg tracking-wider'>
+                                                        {/* Check if the current testimonial is expanded */}
+                                                        {HTMLReactParser(
+                                                            expanded[index]
+                                                                ? testm.description // Show full text if expanded
+                                                                : truncateText(testm.description, 100) // Show truncated text otherwise
+                                                        )}
+                                                    </p>
+                                                    {/* Toggle between "Read More" and "Read Less" */}
+                                                    <button
+                                                        onClick={() => toggleExpand(index)}
+                                                        className="text-blue-500 hover:underline"
+                                                    >
+                                                        {expanded[index] ? "Read Less" : "Read More"}
+                                                    </button>
+                                                </div>
                                                 </div>
                                             </div>
                                         </>
