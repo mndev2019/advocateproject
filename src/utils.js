@@ -1,5 +1,5 @@
 import axios from "axios";
-export const url = "http://laccolegal.com/admin";
+export const url = "https://laccolegal.com/admin";
 
 
 export const get_services = async () => {
