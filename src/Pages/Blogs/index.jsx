@@ -11,6 +11,7 @@ import { get_blogs } from '../../utils';
 import { useEffect, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Seo from '../../Seocomponent/Seo';
 
 
 const Blogs = () => {
@@ -25,6 +26,9 @@ const Blogs = () => {
 
     return (
         <>
+            <Seo title="Knowledge Corner | Lacco Legal - Insights and Legal Resources" description="Stay informed with Lacco Legal’s Knowledge Corner. Explore articles, updates, and expert insights on key legal topics to empower your decision-making and keep you updated with the latest trends in law.
+"
+            />
             <PageBanner title="Knowledge Corner" links="Knowledge Corner" banner={contactimg} />
             <section className="lg:p-20 md:p-10 p-5">
                 <div className="container mx-auto">

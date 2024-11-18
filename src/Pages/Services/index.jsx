@@ -9,6 +9,7 @@ import bannerimg from '../../assets/img/pagebanner.jpg'
 import PageBanner from '../../Layout/PageBanner';
 import ServiceBox from '../Home/ServiceBox';
 import { get_services } from '../../utils';
+// import Seo from '../../Seocomponent/Seo';
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -25,6 +26,7 @@ const Services = () => {
 
     return (
         <>
+          
             <PageBanner links="Services" banner={bannerimg} title={'Our Practise Areas'} />
             <section className='py-[3rem] bg-blue-gray-50'>
                 <div className="container">

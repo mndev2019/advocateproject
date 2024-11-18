@@ -9,6 +9,7 @@ import axios from 'axios';
 import loadingimg from '../../assets/img/loading.svg';
 import PageBanner from '../../Layout/PageBanner';
 import { url } from '../../utils';
+import Seo from '../../Seocomponent/Seo';
 //import Googlemap from 'layouts/Googlemap';
 
 const Career = () => {
@@ -84,6 +85,10 @@ const Career = () => {
     }
     return (
         <>
+            <Seo title="Careers | Join Lacco Legal - Grow with Us
+" description="Explore exciting career opportunities at Lacco Legal. Join our team of dedicated legal professionals and contribute to delivering exceptional legal services. Discover your next step with us today!
+"
+            />
             <PageBanner links="Career" title="Career" banner={contactbanner} />
             <section className="py-5 px-4" id="career">
                 <div className="container mx-auto">

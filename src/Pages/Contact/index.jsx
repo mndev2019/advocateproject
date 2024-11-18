@@ -8,10 +8,14 @@ import callimg from '../../assets/img/call.png'
 import { Contact as Cont } from '../../Pages/Home/Contact'
 // import Googlemap from 'layouts/Googlemap'
 import PageBanner from '../../Layout/PageBanner'
+import Seo from '../../Seocomponent/Seo'
 const Contact = () => {
 
   return (
     <>
+     <Seo title="Contact Us | Lacco Legal - Get in Touch with Our Legal Experts" description="Reach out to Lacco Legal for expert legal guidance. Contact us today for consultations or inquiries about our services. We're here to help you navigate your legal needs effectively.
+"
+            />
       <PageBanner title="Contact us" links="Contact Us" banner={contactbanner} />
       <section className='py-[4rem] contactusdetails '>
         <div className="container mx-auto">

@@ -5,7 +5,11 @@ import { url } from '../../utils';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-const ServiceBox = ({service}) => {
+import Seo from '../../Seocomponent/Seo';
+// import { useEffect, useState } from 'react';
+const ServiceBox = ({ service }) => {
+    // const location = window.location;
+    // const [title , settitle] = useState("")
     function cleanString(input) {
         const string = input.substr(0, 150);
         var noHtml = string.replace(/<\/?[^>]+(>|$)/g, "");
@@ -13,8 +17,15 @@ const ServiceBox = ({service}) => {
         var cleanString = noHtml.replace(/[^a-zA-Z0-9 ']/g, "");
         return cleanString;
     }
+
+
+    // useEffect(()=>{
+    //     settitle(service.name)
+    // }, [location])
     return (
         <>
+            <Seo title={service?.name} description={service.desc} />
+      
             <div className="w-full service-block-one ">
                 <Link to={'/services/' + service?.url} className="block w-full inner-box">
                     <div className="icon-box te-icon-box">
@@ -35,7 +46,7 @@ const ServiceBox = ({service}) => {
                         <div className="link te-btn w-full absolute bottom-3 start-0 px-4">
                             <button className="transition-all duration-100 bg-gray-300 text-black shadow-sm shadow-blue-gray-900 inline-flex items-center justify-center gap-3 t-12 uppercase tracking-wide px-10 py-3 w-full  rounded-full">
                                 Explore  <span className='rotate-[-45deg]'>
-                                <FontAwesomeIcon icon={faArrowRight} />
+                                    <FontAwesomeIcon icon={faArrowRight} />
                                 </span>
                             </button>
                         </div>
@@ -46,8 +57,8 @@ const ServiceBox = ({service}) => {
         </>
     )
 }
-ServiceBox.propTypes ={
-    service : PropTypes.object   
+ServiceBox.propTypes = {
+    service: PropTypes.object
 }
 
 export default ServiceBox

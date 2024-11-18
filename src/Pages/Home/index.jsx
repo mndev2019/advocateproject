@@ -17,6 +17,7 @@ import Banner from './Banner';
 import { Contact } from './Contact';
 import Teams from '../AboutUs/Teams';
 import HomeBlog from '../Blogs/HomeBlog';
+import Seo from '../../Seocomponent/Seo';
 
 const Home = () => {
     const aparts = [
@@ -56,6 +57,9 @@ const Home = () => {
     ];
     return (
         <>
+            <Seo title="Lacco Legal | Expert Legal Services for Business and Individuals" description="Lacco Legal provides comprehensive legal solutions, including business law, contract negotiation, and personal legal services. Trust our experienced team for effective legal guidance tailored to your needs.
+"
+            />
             <Helmet>
                 <title>Home | LACCO Legal </title>
                 <meta name="description" content="I am advocate Dheeraj Kumar. Practicing at delhi high court & supreme court. Contact us legal advice, lawyer, law, legal advice, legal assistance, legal issues, legal questions, find a lawyer, legal advice, a lawyer, legal questions, legal answers, free legal advice, legal response, law consultants, legal advisers ask, ask a legal question needs legal help, legal assistance, free legal answers, get free legal answer, find a local lawyers" />
@@ -71,9 +75,9 @@ const Home = () => {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Disclaimer />
-          
-                <Banner/>
-            
+
+            <Banner />
+
             <section className='space aboutSection bg-blue-gray-50 lg:p-20  md:p-10 p-5'>
                 <div className="container mx-auto">
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
@@ -143,9 +147,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <Teams/>
-            <HomeBlog/>
-            <Contact/>
+            <Teams />
+            <HomeBlog />
+            <Contact />
 
         </>
     )
